@@ -7,7 +7,12 @@ st.set_page_config(page_title="📂 Multi-File Search Dashboard", layout="wide")
 st.title("📂 Multi-File Search Dashboard")
 st.write("Upload multiple text files, preview them, and search for keywords with highlighted results.")
 
-# File uploader_files = st.file_uploader("Upload text files", type=["txt", "log", "csv"], accept_multiple_files=True)
+# ✅ File uploader (this was missing in the broken version)
+uploaded_files = st.file_uploader(
+    "Upload text files", 
+    type=["txt", "log", "csv"], 
+    accept_multiple_files=True
+)
 
 # Display file previews in tabs
 if uploaded_files:
